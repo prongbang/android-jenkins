@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  android-jenkins:
+      build: .
+      ports: 
+        - "8080:8080"
+        - "50000:50000"
+      volumes: 
+        - "./volumns/jenkins:/var/jenkins_home"
+      restart: "always"
